@@ -14,15 +14,15 @@
   <header class="site-header">
     <a class="wordmark" href="#home" aria-label="AURORA home">AUR<span class="star-letter">✳</span>RA<span class="wordmark-dot">.</span></a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#members">Members</a><a href="#universe">Universe</a><a href="#music">Music</a><a href="#connect">Connect</a>
+      <a href="#members">Members</a><a href="#universe">Universe</a><a href="#music">Music</a><a href="#news">News</a><a href="#videos">MVs</a><a href="#mascots">Mascots</a><a href="#connect">Connect</a>
     </nav>
     <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="mobileNav">MENU ☰</button>
     <a class="header-enter" href="#universe">ENTER THE WORLD ↗</a>
   </header>
-  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#members">Members</a><a href="#universe">Universe</a><a href="#music">Music</a><a href="#connect">Connect</a></nav>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#members">Members</a><a href="#universe">Universe</a><a href="#music">Music</a><a href="#news">News</a><a href="#videos">MVs</a><a href="#mascots">Mascots</a><a href="#connect">Connect</a></nav>
   <main>
     <section id="home" class="hero">
-      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-photo" role="img" aria-label="AURORA group banner — add your photo to images/extras/group-banner.jpg"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
       <div class="hero-kicker"><span class="blink-dot"></span> AURORA WORLDWIDE · EST. 04.19.2019</div>
       <div class="hero-center">
         <div class="hero-stars" aria-hidden="true">✧ ✦ ✧</div>
@@ -68,16 +68,33 @@
 
     <section id="music" class="section music-section">
       <div class="section-heading"><div><p class="eyebrow">03 / THE SOUNDTRACK</p><h2>Always <em>in bloom.</em></h2></div><p>From the first bloom to the next chapter.<br />A living archive of AURORA's music.</p></div>
-      <div class="album-layout">
-        <article class="album-card album-one"><div class="album-art"><span>01</span><strong>INTO<br />BLOOM</strong><small>2019</small></div><h3>Into Bloom</h3><p>Debut EP · 2019</p></article>
-        <article class="album-card album-two"><div class="album-art"><span>02</span><strong>RISE OF<br />WINGS</strong><small>2019</small></div><h3>Rise of Wings</h3><p>EP · 2019</p></article>
-        <article class="album-card album-three"><div class="album-art"><span>✳</span><strong>A★POP</strong><small>2027</small></div><h3>A★POP</h3><p>2027 era · Preview</p></article>
+      <div class="album-layout" id="albumGallery">
       </div>
       <p class="archive-note">✧ More albums and release details can be added as your story develops.</p>
     </section>
 
+
+    <section id="news" class="section news-section">
+      <div class="section-heading"><div><p class="eyebrow">04 / THE BULLETIN</p><h2>Latest <em>updates.</em></h2></div><p>News from AURORA's world.
+<br />Edit announcements in script.js.</p></div>
+      <div class="news-grid" id="newsGrid"></div>
+    </section>
+
+    <section id="videos" class="section videos-section">
+      <div class="section-heading"><div><p class="eyebrow">05 / WATCH THE STARS</p><h2>Music <em>videos.</em></h2></div><p>Every era has a story.
+<br />Add thumbnails and YouTube links whenever you're ready.</p></div>
+      <div class="video-grid" id="videoGrid"></div>
+    </section>
+
+    <section id="mascots" class="section mascot-section">
+      <div class="section-heading"><div><p class="eyebrow">06 / LITTLE COMPANIONS</p><h2>Meet the <em>mascots.</em></h2></div><p>Twelve members, twelve plush companions.
+<br />Select one to visit its mini profile.</p></div>
+      <div class="mascot-grid" id="mascotGrid"></div>
+      <div id="mascotDetail" class="mascot-detail" aria-live="polite"><p>Select a mascot to learn more ♡</p></div>
+    </section>
+
     <section id="connect" class="section connect-section">
-      <div class="connect-card"><p class="eyebrow">04 / STAY IN ORBIT</p><h2>Find us in<br /><em>your universe.</em></h2><p>One group. Twelve stars. A million little moments.</p><div class="handle">@weareaurora <button id="copyHandle" aria-label="Copy social media handle">COPY ↗</button></div><div class="socials"><span>INSTAGRAM</span><span>TIKTOK</span><span>X / TWITTER</span></div><p class="social-note">These are fictional account handles for the story; live social links are intentionally not included.</p></div>
+      <div class="connect-card"><p class="eyebrow">07 / STAY IN ORBIT</p><h2>Find us in<br /><em>your universe.</em></h2><p>One group. Twelve stars. A million little moments.</p><div class="handle">@weareaurora <button id="copyHandle" aria-label="Copy social media handle">COPY ↗</button></div><div class="socials"><span>INSTAGRAM</span><span>TIKTOK</span><span>X / TWITTER</span></div><p class="social-note">These are fictional account handles for the story; live social links are intentionally not included.</p></div>
     </section>
   </main>
   <footer><a class="footer-logo" href="#home">AUR✳RA</a><span>TWELVE STARS, ONE UNIVERSE · MADE FOR RORIE</span><span>UNOFFICIAL FICTIONAL FAN PROJECT · NOT AFFILIATED WITH JYP OR REAL ARTISTS</span></footer>

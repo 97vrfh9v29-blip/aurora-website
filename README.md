@@ -1,31 +1,36 @@
-# AURORA — Interactive Fan Universe
+# AURORA — GitHub Pages Website (2026–2027)
 
-A fictional, fan-made AURORA website designed for a Wattpad story set in 2026–2027. Not affiliated with JYP Entertainment or any real artist.
+This is a **fictional fan-made** website, not an official JYP site.
 
-## Files
-- `index.html` — page structure and wording
-- `style.css` — colors, typography, mobile layout and effects
-- `script.js` — member profiles and interactive desktop folders
+## Upload to GitHub Pages
+1. Unzip this package.
+2. Upload the **contents of `aurora-website`** to your public GitHub repository root (`index.html` must be at the root).
+3. Go to Settings → Pages → Deploy from a branch → main → /(root) → Save.
+4. Your URL will be `https://YOURUSERNAME.github.io/REPOSITORY-NAME/`.
 
-## Publish with GitHub Pages
-1. Sign in to GitHub and create a **public** repository named `aurora-website`.
-2. Click **Add file → Upload files** and upload `index.html`, `style.css`, and `script.js` from this folder. They must be in the repository's **top level**, not inside a subfolder.
-3. Click **Commit changes**.
-4. Go to **Settings → Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**.
-6. Choose **main** and **/(root)**, then **Save**.
-7. Wait a few minutes. Visit `https://YOUR-GITHUB-USERNAME.github.io/aurora-website/`.
+## Add a group banner
+Save a wide group photo as `images/extras/group-banner.jpg`. The hero will automatically use it, with a pale overlay to keep text readable. Adjust `background-position` and the overlay in `style.css` under `.hero-photo` if needed.
 
-## Customize
-- **Member bios:** edit the `members` array at the top of `script.js`.
-- **Interactive folder contents:** edit `folderContent` in `script.js`.
-- **Homepage text and album cards:** edit `index.html`.
-- **Colors and spacing:** edit `style.css`.
-- **Member portraits:** the first version deliberately uses color-symbol placeholders. You can replace them with properly licensed/authorized images later.
-- **Socials:** @weareaurora is displayed as a fictional handle, not a live link.
+## Add member pictures
+Save portrait photos as `images/members/mia.jpg`, `lea.jpg`, `yuri.jpg`, `yejin.jpg`, `yena.jpg`, `chaeyoung.jpg`, `eunhee.jpg`, `chaerin.jpg`, `miju.jpg`, `misa.jpg`, `yerin.jpg`, `mihyun.jpg`. Member cards and popups will show them automatically.
 
-## Notes
-- No backend, database, sign-in or server is needed.
-- The RORIE Room is a curated fictional message display, **not** a live guestbook. GitHub Pages is static hosting; a real guestbook would need a separate service.
-- Fonts are loaded from Google Fonts. If offline, the site uses fallback fonts.
-- For the simplest editing experience, use GitHub's pencil (Edit) icon on a file, then commit changes.
+## Add albums, news, videos, and mascots
+Open `script.js` and scroll to `EDIT YOUR SITE CONTENT BELOW`. Edit the four arrays:
+- `albums`: title, detail, image path (`images/albums/...`). Add each of your albums as another object.
+- `news`: date, category, title, summary, image path (`images/news/...`). The two initial items are **sample text**, not canon news.
+- `musicVideos`: title, era, thumbnail path (`images/videos/...`), and `url` (optional YouTube URL). Empty URL shows “video link coming soon.” Do not link other artists' official videos as if they are real AURORA uploads.
+- `mascots`: initially creates twelve **unnamed placeholders**, one per member. Edit each object's name, description, and image after deciding your mascot designs. Upload pictures to `images/mascots/mia.png`, etc.
+
+## Tips
+- Use lowercase filenames with no spaces. Paths are case-sensitive.
+- JPG/PNG/WebP all work, but update the extension in code if not JPG/PNG.
+- Use wide images for banners, square images for albums and mascots, 16:9 for music-video thumbnails, and vertical portraits for members.
+- Commit your changes in GitHub and allow a few minutes for GitHub Pages to rebuild.
+- Keep the site labeled as a fictional fan project and use images you have permission to publish.
+
+## Member profiles
+Edit the `members` list at the beginning of `script.js` to update role, birthday, MBTI, color and symbol. Fun facts have been removed from the website pop-up profiles (the existing facts arrays remain in source but are not displayed).
+
+
+### Zodiac signs, deities and symbols
+The member profiles now display zodiac sign and representative Greek deity. Edit `zodiac`, `deity`, or `symbol` for any member in `script.js`. Mihyun's symbol is 🍒 (cherry), distinct from Lea's ✧. All other files and site sections are retained.
