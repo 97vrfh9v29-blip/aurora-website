@@ -112,9 +112,12 @@ mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
 
 /* ===== EDIT YOUR SITE CONTENT BELOW ===== */
 const albums = [
-  {title:'Into Bloom',detail:'Debut EP · 2019',image:'images/albums/into-bloom.jpg'},
-  {title:'Rise of Wings',detail:'EP · 2019',image:'images/albums/rise-of-wings.jpg'},
-  {title:'A★POP',detail:'Full album · 2027',image:'images/albums/apop.jpg'}
+  {title:'THIS IS FOR',detail:'4th Full Album · Formula Of Us',image:'images/albums/this-is-for.jpg'},
+  {title:'Know About Me',detail:'4th EP · Lucid Flame',image:'images/albums/know-about-me.jpg'},
+  {title:'Escape Room',detail:'Special Mixtape · Reverie',image:'images/albums/escape-room.jpg'},
+  {title:'Rewind',detail:'8th Mini Album · from our memento box',image:'images/albums/rewind.jpg'},
+  {title:'Hot (placeholder)',detail:'3rd EP · Golden Dawn',image:'images/albums/hot.jpg'},
+  {title:'Talk That Talk',detail:'7th Mini Album · BETWEEN 1&2',image:'images/albums/talk-that-talk.jpg'}
 ];
 
 const news = [
