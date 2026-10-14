@@ -187,6 +187,10 @@ function renderVideos(){document.getElementById('videoGrid').innerHTML=musicVide
 function renderMascots(){
  const el=document.getElementById('mascotGrid');
  el.innerHTML=mascots.map((m,i)=>`<button type="button" class="mascot-card" data-mascot="${i}" style="--mascot-color:${safeText(m.color)}">${imageOrPlaceholder(m.image,m.member+' mascot','♡')}<strong>${safeText(m.name)}</strong><span>${safeText(m.member)}’s mascot ↗</span></button>`).join('');
- el.addEventListener('click',e=>{const b=e.target.closest('[data-mascot]');if(!b)return;const m=mascots[Number(b.dataset.mascot)];document.getElementById('mascotDetail').innerHTML=`<div class="mascot-detail-inner">${imageOrPlaceholder(m.image,m.member+' mascot','♡')}<div><p class="feature-meta">${safeText(m.member.toUpperCase())} · PLUSH FRIEND</p><h3>${safeText(m.name)}</h3><p>${safeText(m.description)}</p></div></div>`;document.getElementById('mascotDetail').scrollIntoView({behavior:'smooth',block:'nearest'});});
+ el.addEventListener('click',e=>{const b=e.target.closest('[data-mascot]');if(!b)return;const m=mascots[Number(b.dataset.mascot)];document.getElementById('mascotDetail').innerHTML=`<div class="mascot-detail-inner">${imageOrPlaceholder(m.image,m.member+' mascot','♡')}<div><p class="feature-meta">${safeText(m.member.toUpperCase())} · PLUSH FRIEND</p><h3>${safeText(m.name)}</h3>
+<p><strong>Animal:</strong> ${safeText(m.animal)}</p>
+<p><strong>Personality:</strong> ${safeText(m.personality)}</p>
+<p><strong>Symbol accessory:</strong> ${safeText(m.accessory)}</p>
+<p>${safeText(m.description)}</p>
 }
 renderAlbums();renderNews();renderVideos();renderMascots();
