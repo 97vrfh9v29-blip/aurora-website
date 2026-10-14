@@ -247,7 +247,26 @@ function safeText(value){
 }
 
 function imageOrPlaceholder(path,alt,placeholder='✳'){
- return `<div class="media-frame"><img src="${safeText(path)}" alt="${safeText(alt)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><span class="image-placeholder" hidden>${safeText(placeholder)}</span></div>`;
+ const albumGallery = document.getElementById('albumGallery');
+
+  if (!albumGallery) return;
+
+  albumGallery.innerHTML = albums.map(album => `
+    <article class="feature-card">
+      <div class="media-frame">
+        <img
+          src="${album.image}"
+          alt="${album.title}"
+          loading="lazy"
+        >
+      </div>
+      <div class="feature-copy">
+        <p class="feature-meta">${album.detail}</p>
+        <h3>${album.title}</h3>
+      </div>
+    </article>
+  `).join('');
+}
 }
 
 function renderAlbums(){
