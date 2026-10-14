@@ -251,20 +251,7 @@ function imageOrPlaceholder(path,alt,placeholder='✳'){
 }
 
 function renderAlbums(){
-  document.getElementById('videoGrid').innerHTML =
-    musicVideos.map(v => `
-      <article class="feature-card video-card">
-        ${imageOrPlaceholder(
-          v.thumbnail,
-          v.title + ' music video image',
-          '▶'
-        )}
-        <div class="feature-copy">
-          <p class="feature-meta">${safeText(v.era)}</p>
-          <h3>${safeText(v.title)}</h3>
-        </div>
-      </article>
-    `).join('');
+ document.getElementById('albumGallery').innerHTML=albums.map(a=>`<article class="feature-card">${imageOrPlaceholder(a.image,a.title,'♫')}<div class="feature-copy"><p class="feature-meta">${safeText(a.detail)}</p><h3>${safeText(a.title)}</h3></div></article>`).join('');
 }
 
 function renderNews(){
@@ -272,7 +259,7 @@ function renderNews(){
 }
 
 function renderVideos(){
- document.getElementById('videoGrid').innerHTML=musicVideos.map(v=>`<article class="feature-card video-card">${imageOrPlaceholder(v.thumbnail,v.title+' video thumbnail','▶')}<div class="feature-copy"><p class="feature-meta">${safeText(v.era)}</p><h3>${safeText(v.title)}</h3>${/^https:\/\/(www\.)?(youtube\.com|youtu\.be)\//.test(v.url)?`<a class="feature-link" href="${safeText(v.url)}" target="_blank" rel="noopener noreferrer">WATCH VIDEO ↗</a>`:'<span class="feature-unavailable">VIDEO LINK COMING SOON</span>'}</div></article>`).join('');
+ document.getElementById('videoGrid').innerHTML=musicVideos.map(v=>`<article class="feature-card video-card">${imageOrPlaceholder(v.thumbnail,v.title+' music video image','▶')}<div class="feature-copy"><p class="feature-meta">${safeText(v.era)}</p><h3>${safeText(v.title)}</h3></div></article>`).join('');
 }
 
 function renderMascots(){
