@@ -515,3 +515,36 @@ if (document.readyState === "loading") {
 } else {
   initializeAurora();
 }
+
+/* AURORA MEMBER PROFILE CORRECTIONS */
+
+// Correct Chaeyoung and Miju's positions
+members.find(m => m.name === "Chaeyoung").role =
+  "Sub Vocalist · Visual · Center";
+
+members.find(m => m.name === "Miju").role =
+  "Sub Vocalist · Visual";
+
+// Update the positions shown on member cards
+document.querySelectorAll("[data-member]").forEach(card => {
+  const member = members[Number(card.dataset.member)];
+  const roleLabel = card.querySelector(".member-role");
+
+  if (member && roleLabel) {
+    roleLabel.textContent = member.role;
+  }
+});
+
+// Remove the facts section from member pop-ups
+const originalOpenMember = openMember;
+
+openMember = function(index) {
+  originalOpenMember(index);
+
+  const modal = document.getElementById("memberModal");
+  const factsSection = modal.querySelector(".member-facts");
+
+  if (factsSection) {
+    factsSection.remove();
+  }
+};
