@@ -73,7 +73,106 @@ const musicVideos = [
   // Add more: ,{title:'Song',era:'Album · Year',thumbnail:'images/videos/song.jpg',url:'https://www.youtube.com/watch?v=...'}
 ];
 // Mascot names/designs are intentionally left blank until you decide them.
-const mascots = members.map(m => ({member:m.name,name:'Name coming soon',image:`images/mascots/${m.name.toLowerCase()}.png`,description:'Add this mascot’s name, personality, and story here.',color:m.color}));
+const mimoriInfo = {
+  Mia: {
+    name: 'ROUKI',
+    animal: 'Wolf',
+    personality: 'Bold, competitive, adventurous',
+    accessory: 'Rose',
+    description: "Rouki is a fearless little wolf who loves a challenge. She's confident, competitive, and always ready for an adventure. Although she acts tough, she's secretly affectionate and hates being left out."
+  },
+  Lea: {
+    name: 'ANGBUN',
+    animal: 'Bunny',
+    personality: 'Caring, playful, mischievous',
+    accessory: 'Lotus flower',
+    description: "Angbun is a sweet blue bunny who loves looking after her friends. Behind her innocent smile is a playful troublemaker who loves teasing others and joining in on the fun."
+  },
+  Yuri: {
+    name: 'SÉLI',
+    animal: 'Swan',
+    personality: 'Witty, competitive, dependable',
+    accessory: 'Crown',
+    description: "Séli is a graceful swan with a surprisingly hilarious personality. She loves telling dramatic stories, teasing her friends, and turning ordinary activities into competitions."
+  },
+  Yejin: {
+    name: 'KLOVI',
+    animal: 'Fox',
+    personality: 'Clever, creative, mischievous',
+    accessory: 'Clover',
+    description: "Klovi is a clever little fox who enjoys painting, collecting pretty things, and playing harmless tricks. She always manages to look completely innocent when she's the one causing trouble."
+  },
+  Yena: {
+    name: 'PIPPO',
+    animal: 'Duck',
+    personality: 'Energetic, curious, spontaneous',
+    accessory: 'Star',
+    description: "Pippo is a cheerful little duck who loves exploring and trying new things. Her endless curiosity and spontaneous ideas make every day more exciting."
+  },
+  Chaeyoung: {
+    name: 'BINNIE',
+    animal: 'Cat',
+    personality: 'Sweet, clever, playful',
+    accessory: 'Butterfly',
+    description: "Binnie is a strawberry-pink cat with a sweet face and a mischievous personality. She loves games, puzzles, and teasing her friends. She's always thinking several steps ahead."
+  },
+  Eunhee: {
+    name: 'ZAZI',
+    animal: 'Leopard',
+    personality: 'Confident, outspoken, loyal',
+    accessory: 'Leopard-print bow',
+    description: "Zazi is a confident little leopard who likes doing things her own way. She can be stubborn and competitive, but she's fiercely loyal and protective of her friends."
+  },
+  Chaerin: {
+    name: 'POMPOM',
+    animal: 'Puppy',
+    personality: 'Friendly, expressive, affectionate',
+    accessory: 'Daisy',
+    description: "Pompom is a cheerful puppy with a daisy in her hair. She makes friends everywhere she goes, loves cheering everyone up, and always brings excitement wherever she goes."
+  },
+  Miju: {
+    name: 'DORONG',
+    animal: 'Deer',
+    personality: 'Gentle, thoughtful, easily startled',
+    accessory: 'Crescent moon',
+    description: "Dorong is a gentle little deer with big expressive eyes. She notices when her friends need comfort and loves giving thoughtful gifts. She's easily frightened but has an unexpectedly funny side."
+  },
+  Misa: {
+    name: 'KIKO',
+    animal: 'Koala',
+    personality: 'Quiet, observant, secretly playful',
+    accessory: 'Black-cat charm',
+    description: "Kiko is a quiet koala who prefers observing from the sidelines. Around her closest friends, she's surprisingly sarcastic, expressive, and playful. Scary games always bring out her loudest reactions."
+  },
+  Yerin: {
+    name: 'TAMTAM',
+    animal: 'Hamster',
+    personality: 'Talkative, cheeky, fearless',
+    accessory: 'Wing clip',
+    description: "Tamtam is a tiny hamster with a huge personality. She's witty, talkative, and loves teasing everyone. Despite her size, she never backs down from an argument."
+  },
+  Mihyun: {
+    name: 'LULI',
+    animal: 'Peacock',
+    personality: 'Fashionable, confident, playful',
+    accessory: 'Jeweled feather crown',
+    description: "Luli is a stylish aquamarine peacock who loves dressing up and showing off her beautiful feathers. She's playful, confident, and always ready for a photo."
+  }
+};
+
+const mascots = members.map(m => {
+  const info = mimoriInfo[m.name];
+  return {
+    member: m.name,
+    name: info.name,
+    animal: info.animal,
+    personality: info.personality,
+    accessory: info.accessory,
+    description: info.description,
+    image: `images/mascots/${m.name.toLowerCase()}.png`,
+    color: m.color
+  };
+});
 
 function safeText(value){return String(value ?? '').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
 function imageOrPlaceholder(path,alt,placeholder='✳'){
