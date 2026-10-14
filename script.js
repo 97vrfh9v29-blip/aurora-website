@@ -126,8 +126,12 @@ const news = [
 ];
 
 const musicVideos = [
-  {title:'La Vie en Rose',era:'Into Bloom · 2019',thumbnail:'images/videos/la-vie-en-rose.jpg',url:''},
-  {title:'Butterfly',era:'Rise of Wings · 2019',thumbnail:'images/videos/butterfly.jpg',url:''}
+  {title:'THIS IS FOR',era:'Formula Of Us · 4th Full Album',thumbnail:'images/videos/this-is-for.jpg'},
+  {title:'Know About Me',era:'Lucid Flame · 4th EP',thumbnail:'images/videos/know-about-me.jpg'},
+  {title:'Escape Room',era:'Reverie · Special Mixtape',thumbnail:'images/videos/escape-room.jpg'},
+  {title:'Rewind',era:'from our memento box · 8th Mini Album',thumbnail:'images/videos/rewind.jpg'},
+  {title:'Hot (placeholder)',era:'Golden Dawn · 3rd EP',thumbnail:'images/videos/hot.jpg'},
+  {title:'Talk That Talk',era:'BETWEEN 1&2 · 7th Mini Album',thumbnail:'images/videos/talk-that-talk.jpg'}
 ];
 
 /* MIMORI official mascot information */
