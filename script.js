@@ -251,8 +251,20 @@ function imageOrPlaceholder(path,alt,placeholder='✳'){
 }
 
 function renderAlbums(){
- document.getElementById('albumGallery').innerHTML=albums.map(a=>`<article class="album-card">${imageOrPlaceholder(a.image,a.title+' album cover','♫')}<h3>${safeText(a.title)}</h3><p>${safeText(a.detail)}</p></article>`).join('');
- folderContent.archive.html=`<h3>Soundtrack of the stars ♫</h3><p>Visit the Soundtrack section for the full discography.</p>${albums.map(a=>`<span class="mini-tag">${safeText(a.detail)} · ${safeText(a.title)}</span>`).join('')}<p><a href="#music" class="window-link" onclick="document.getElementById('universeWindow').hidden=true">VIEW THE SOUNDTRACK ↗</a></p>`;
+  document.getElementById('videoGrid').innerHTML =
+    musicVideos.map(v => `
+      <article class="feature-card video-card">
+        ${imageOrPlaceholder(
+          v.thumbnail,
+          v.title + ' music video image',
+          '▶'
+        )}
+        <div class="feature-copy">
+          <p class="feature-meta">${safeText(v.era)}</p>
+          <h3>${safeText(v.title)}</h3>
+        </div>
+      </article>
+    `).join('');
 }
 
 function renderNews(){
