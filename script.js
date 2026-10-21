@@ -16,11 +16,12 @@ const members = [
   {name:"Seona",color:"#70C6C3",symbol:"✺",role:"Sub Vocalist · Sub Rapper · Visual · Face of the Group",mbti:"ISFP",birthday:"March 10, 2004",zodiac:"Pisces",deity:"Aphrodite",facts:["Youngest member.","Her older sister is an actress.","Loves mint chocolate ice cream.","Fashionable, confident and playful."]}
 ];
 
+/* ORIGINAL IMAGE FILENAMES — NOT SHOWN ON WEBSITE */
 const originalNames = {
-  Seol: "Mia",
-  Chaeun: "Chaeyoung",
-  Rina: "Chaerin",
-  Seona: "Mihyun"
+  Seol:"Mia",
+  Chaeun:"Chaeyoung",
+  Rina:"Chaerin",
+  Seona:"Mihyun"
 };
 
 members.forEach(m => {
@@ -526,7 +527,7 @@ if (document.readyState === "loading") {
 
 /* AURORA MEMBER PROFILE CORRECTIONS */
 
-// Correct Chaeyoung and Miju's positions
+// Correct Chaeun and Miju's positions
 members.find(m => m.name === "Chaeun").role =
   "Sub Vocalist · Visual · Center";
 
