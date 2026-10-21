@@ -2,18 +2,18 @@
 
 /* MEMBER PROFILES */
 const members = [
-  {name:"Mia",color:"#A32642",symbol:"✦",role:"Main Rapper · Vocalist",mbti:"ESTP",birthday:"December 19, 1999",zodiac:"Sagittarius",deity:"Ares",facts:["Oldest member of AURORA.","Produces and writes music.","Known for her lower harmonies.","Competitive, bold and adventurous."]},
+  {name:"Seol",color:"#A32642",symbol:"✦",role:"Main Rapper · Vocalist",mbti:"ESTP",birthday:"December 19, 1999",zodiac:"Sagittarius",deity:"Ares",facts:["Oldest member of AURORA.","Produces and writes music.","Known for her lower harmonies.","Competitive, bold and adventurous."]},
   {name:"Lea",color:"#A7A4E6",symbol:"✧",role:"Leader · Main Vocalist · Lead Dancer",mbti:"INFP",birthday:"January 26, 2001",zodiac:"Aquarius",deity:"Zeus",facts:["Chosen as leader by the members.","Lived in New York during childhood.","Known for her clear, powerful vocals.","Caring, playful and mischievous."]},
   {name:"Yuri",color:"#742C47",symbol:"✳",role:"Main Vocalist · Lead Dancer",mbti:"ISTP",birthday:"February 2, 2001",zodiac:"Aquarius",deity:"Athena",facts:["Blunt, funny and competitive.","Loves cooking.","Known for her storytelling.","Adopted cats Mochi and Miso with Yejin."]},
   {name:"Yejin",color:"#22816A",symbol:"❀",role:"Main Vocalist",mbti:"INFJ",birthday:"September 22, 2001",zodiac:"Virgo",deity:"Hera",facts:["Born in Busan.","Enjoys drawing and painting.","Plays guitar, piano and violin.","Loves teasing the members."]},
   {name:"Yena",color:"#F0C94D",symbol:"★",role:"Lead Vocalist · Lead Rapper · Main Dancer",mbti:"ENFP",birthday:"April 23, 2002",zodiac:"Taurus",deity:"Hermes",facts:["Professionally trained in dance.","Energetic and spontaneous.","Part of Powerpuffz with Chaeyoung and Eunhee."]},
-  {name:"Chaeyoung",color:"#7BBDE8",symbol:"✿",role:"Lead Vocalist · Center",mbti:"ESFJ",birthday:"June 1, 2002",zodiac:"Gemini",deity:"Poseidon",facts:["Loves video games.","Very good at math.","Her favorite color is pink.","Part of Powerpuffz."]},
+  {name:"Chaeun",color:"#7BBDE8",symbol:"✿",role:"Lead Vocalist · Center",mbti:"ESFJ",birthday:"June 1, 2002",zodiac:"Gemini",deity:"Poseidon",facts:["Loves video games.","Very good at math.","Her favorite color is pink.","Part of Powerpuffz."]},
   {name:"Eunhee",color:"#3566C3",symbol:"✶",role:"Main Vocalist · Lead Dancer",mbti:"ISTP",birthday:"August 1, 2002",zodiac:"Leo",deity:"Apollo",facts:["An only child.","Her mother is a famous actress.","Has perfect pitch.","Confident, outspoken and loyal."]},
-  {name:"Chaerin",color:"#E8893C",symbol:"☼",role:"Lead Vocalist",mbti:"ENFP",birthday:"October 5, 2002",zodiac:"Libra",deity:"Demeter",facts:["Inspired by Girls’ Generation.","Excellent at keeping secrets.","Hosts Chaerin’s Corner.","Friendly and expressive."]},
+  {name:"Rina",color:"#E8893C",symbol:"☼",role:"Lead Vocalist",mbti:"ENFP",birthday:"October 5, 2002",zodiac:"Libra",deity:"Demeter",facts:["Inspired by Girls’ Generation.","Excellent at keeping secrets.","Hosts Chaerin’s Corner.","Friendly and expressive."]},
   {name:"Miju",color:"#DB8FAD",symbol:"☾",role:"Sub Vocalist",mbti:"ISFJ",birthday:"October 15, 2002",zodiac:"Libra",deity:"Artemis",facts:["An only child.","Has written AURORA songs.","Originally wanted to be an actress.","Gentle, thoughtful and unexpectedly funny."]},
   {name:"Misa",color:"#714D80",symbol:"♣",role:"Sub Vocalist · Sub Rapper",mbti:"INTJ",birthday:"November 17, 2003",zodiac:"Scorpio",deity:"Dionysus",facts:["From Japan.","Wants a pet ferret.","Known for her dry humor.","Close friends with Yerin; their duo is Miniz."]},
   {name:"Yerin",color:"#C9A4DC",symbol:"♡",role:"Sub Vocalist",mbti:"INFP",birthday:"January 2, 2004",zodiac:"Capricorn",deity:"Hephaestus",facts:["The shortest member.","Fluent in Japanese.","Has an older brother.","Talkative, witty and chronically online."]},
-  {name:"Mihyun",color:"#70C6C3",symbol:"✺",role:"Sub Vocalist · Sub Rapper · Visual · Face of the Group",mbti:"ISFP",birthday:"March 10, 2004",zodiac:"Pisces",deity:"Aphrodite",facts:["Youngest member.","Her older sister is an actress.","Loves mint chocolate ice cream.","Fashionable, confident and playful."]}
+  {name:"Seona",color:"#70C6C3",symbol:"✺",role:"Sub Vocalist · Sub Rapper · Visual · Face of the Group",mbti:"ISFP",birthday:"March 10, 2004",zodiac:"Pisces",deity:"Aphrodite",facts:["Youngest member.","Her older sister is an actress.","Loves mint chocolate ice cream.","Fashionable, confident and playful."]}
 ];
 
 members.forEach(m => {
