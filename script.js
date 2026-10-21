@@ -16,8 +16,16 @@ const members = [
   {name:"Seona",color:"#70C6C3",symbol:"✺",role:"Sub Vocalist · Sub Rapper · Visual · Face of the Group",mbti:"ISFP",birthday:"March 10, 2004",zodiac:"Pisces",deity:"Aphrodite",facts:["Youngest member.","Her older sister is an actress.","Loves mint chocolate ice cream.","Fashionable, confident and playful."]}
 ];
 
+const originalNames = {
+  Seol: "Mia",
+  Chaeun: "Chaeyoung",
+  Rina: "Chaerin",
+  Seona: "Mihyun"
+};
+
 members.forEach(m => {
-  m.image = "images/members/" + m.name.toLowerCase() + ".jpg";
+  const fileName = originalNames[m.name] || m.name;
+  m.image = "images/members/" + fileName.toLowerCase() + ".jpg";
 });
 
 /* SAFE TEXT AND IMAGE HELPERS */
@@ -442,7 +450,7 @@ const mimoriInfo = {
 };
 
 const mascots = members.map(member => {
-  const info = mimoriInfo[member.name];
+  const info = mimoriInfo[originalNames[member.name] || member.name];
 
   return {
     member:member.name,
@@ -452,7 +460,7 @@ const mascots = members.map(member => {
     accessory:info.accessory,
     description:info.description,
     color:member.color,
-    image:"images/mascots/" + member.name.toLowerCase() + ".png"
+    image:"images/mascots/" + (originalNames[member.name] || member.name).toLowerCase() + ".png"
   };
 });
 
@@ -519,7 +527,7 @@ if (document.readyState === "loading") {
 /* AURORA MEMBER PROFILE CORRECTIONS */
 
 // Correct Chaeyoung and Miju's positions
-members.find(m => m.name === "Chaeyoung").role =
+members.find(m => m.name === "Chaeun").role =
   "Sub Vocalist · Visual · Center";
 
 members.find(m => m.name === "Miju").role =
